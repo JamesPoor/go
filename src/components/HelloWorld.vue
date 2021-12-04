@@ -1,38 +1,16 @@
 <template>
   <div class="html">
-    <div class="csgo-left">
-      <div class="left">
-        <img class="logo" src="../assets/img/logo.webp" alt="" />
-        <div class="left-svg">
-          <a href="#"><img src="../assets/img/discord.svg" alt="" /></a>
-        </div>
-        <div class="left-svg">
-          <a href="#"><img src="../assets/img/twitter.svg" alt="" /></a>
-        </div>
-        <div class="left-svg">
-          <a href="#"><img src="../assets/img/YouTube.svg" alt="" /></a>
-        </div>
-        <div class="left-svg">
-          <a href="#"><img src="../assets/img/facebook.svg" alt="" /></a>
-        </div>
-        <div class="left-svg">
-          <a href="#"><img src="../assets/img/instagram.svg" alt="" /></a>
-        </div>
-      </div>
-    </div>
     <div class="recommend">
-      <img class="banner" src="../assets/img/banner.jpg" alt="" />
       <div class="user">
-        <img src="../assets/img/user.jpg" alt="" />
+        <img class="banner" src="../assets/img/banner.jpg" alt="" />
+        <img class="user-avatar" src="../assets/img/user.jpg" alt="" />
         <p class="csgo-recommend">开箱网推荐</p>
         <p class="csgo">高爆率开箱-及时取回秒到账</p>
-      </div>
-      <div class="csgo-column">
-        <a href="#">csgo开箱网</a>
+        <a class="csgo-column" href="#">csgo开箱网</a>
       </div>
       <div class="csgo-middle">
         <div class="middle">
-          <div class="csgo-popular">
+          <div class="csgo-popular-a">
             <div class="popular-logo">
               <img src="../assets/img/logo.webp" alt="" />
               <a class="goto-rul" href="#"><p class="go-url">立即前往</p></a>
@@ -48,7 +26,7 @@
               </div>
             </div>
           </div>
-          <div class="csgo-popular">
+          <div class="csgo-popular-b">
             <div class="popular-logo">
               <img src="../assets/img/logo.webp" alt="" />
               <a class="goto-rul" href="#"><p class="go-url">立即前往</p></a>
@@ -66,7 +44,7 @@
           </div>
         </div>
         <div class="middle">
-          <div class="csgo-popular">
+          <div class="csgo-popular-a">
             <div class="popular-logo">
               <img src="../assets/img/logo.webp" alt="" />
               <a class="goto-rul" href="#"><p class="go-url">立即前往</p></a>
@@ -82,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="csgo-popular">
+          <div class="csgo-popular-b">
             <div class="popular-logo">
               <img src="../assets/img/logo.webp" alt="" />
               <a class="goto-rul" href="#"><p class="go-url">立即前往</p></a>
@@ -99,6 +77,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="csgo-left">
+      <img class="csgo-logo" src="../assets/img/logo.webp" alt="" />
+      <div class="csgo-img">
+        <img src="../assets/img/discord.svg" alt="" />
+        <img src="../assets/img/facebook.svg" alt="" />
+        <img src="../assets/img/instagram.svg" alt="" />
+        <img src="../assets/img/twitter.svg" alt="" />
+        <img src="../assets/img/YouTube.svg" alt="" />
       </div>
     </div>
   </div>
@@ -126,8 +114,8 @@ export default {
   width: 900px;
   height: 180px;
   position: relative;
-  top: -180px;
   border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .logo {
   width: 64px;
@@ -144,10 +132,13 @@ export default {
 }
 .user {
   position: relative;
-  top: -170px;
+  top: 10px;
 }
-.user img {
+.user-avatar {
   border-radius: 50px;
+  position: absolute;
+  top: 200px;
+  left: 1px;
 }
 
 .csgo-recommend {
@@ -155,23 +146,22 @@ export default {
   font-size: 26px;
   position: relative;
   left: 120px;
-  top: -120px;
+  /* top: -120px; */
 }
 .csgo {
   color: #fff;
   position: relative;
-  top: -130px;
+  /* top: -130px; */
   left: 120px;
 }
-.csgo-column a {
+.csgo-column {
   color: #fff;
   font-size: 14px;
-  position: absolute;
-  top: 130px;
-  left: 10px;
   text-decoration: none;
   border-bottom: 2px solid #71e4e3;
   padding-bottom: 10px;
+  position: relative;
+  top: 20px;
 }
 .popular-logo img {
   width: 64px;
@@ -196,10 +186,15 @@ export default {
   top: 33px;
   color: black;
 }
-.csgo-popular {
+.csgo-popular-a {
   width: 350px;
   height: 150px;
   margin-right: 200px;
+  background-color: #101419;
+}
+.csgo-popular-b {
+  width: 350px;
+  height: 150px;
   background-color: #101419;
 }
 .popular {
@@ -256,29 +251,31 @@ export default {
   padding-top: 50px;
   /* margin-bottom: 50px; */
 }
+
 .csgo-middle {
   position: absolute;
-  top: 150px;
+  top: 350px;
 }
 
-/* 左侧 */
 .csgo-left {
-  width: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-.left {
-  width: 50px;
-  height: 600px;
-  background-color: #111419;
-  border-radius: 10px;
   position: fixed;
+  /* justify-content: center; */
   top: 100px;
+  left: 50px;
+  text-align: center;
+  width: 60px;
+  height: 600px;
+  background-color: rgb(16, 20, 25);
+  border-radius: 10px;
 }
-.left-svg img {
+.csgo-logo {
+  width: 64px;
+  position: relative;
+  top: -80px;
+}
+.csgo-img img {
+  justify-content: center;
   width: 32px;
-  margin-left: 10px;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 </style>
